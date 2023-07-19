@@ -7,50 +7,49 @@
       href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Poppins:wght@100;200;300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" async></script>
   </head>
   <body>
     <div class="header">
       <div class="profile-Pic">
         <img src="./assets/img/me.jpg" />
       </div>
-      <h2>Calvin Shreeves</h2>
-      <h3>Full Stack Developer</h3>
-      <nav
-        style="
-          display: flex;
-          justify-content: space-around;
-          background-color: yellow;
-          padding: 10px;
-        "
-      >
+      <h2>
+        <span
+          style="
+            border-radius: 7px;
+            background-color: black;
+            color: rgba(3, 244, 252, 1);
+          "
+          >Calvin </span
+        ><span
+          style="border-radius: 7px; background-color: rgba(3, 244, 252, 1)"
+          >Shreeves</span
+        >
+      </h2>
+      <h3><span>Full Stack Developer</span></h3>
+      <nav>
         <h4
+          onclick="toggleExperiencePage()"
           style="
             background-color: black;
             color: white;
             font-size: 50px;
             border-radius: 10px;
             padding: 9px;
+            transition: 1s;
+            cursor: pointer;
           "
         >
           Experience
         </h4>
-        <h4 style="font-size: 50px">About Me</h4>
-        <h4 style="font-size: 50px">Contact</h4>
+        <h4 onclick="toggleAboutPage()" style="font-size: 50px">About Me</h4>
+        <h4 onclick="toggleContactPage()" style="font-size: 50px">Contact</h4>
       </nav>
     </div>
     <main>
-      <h1
-        style="
-          text-align: center;
-          font-size: 53px;
-          padding-top: 20px;
-          background-color: rgb(17, 22, 61);
-          color: rgb(235, 229, 229);
-        "
-      >
-        Experience
-      </h1>
-      <div class="project">
+      <h1 id="page-header">Experience</h1>
+      <div id="experience" class="project">
         <div>
           <div class="individual">
             <div class="project-Pic">
@@ -58,10 +57,7 @@
               <div class="skills">
                 <img src="./assets/img/htmlLogo.png" />
                 <img src="./assets/img/cssLogo.png" />
-                <img
-                  src="./assets/img/React-icon.svg.png"
-                  style="background-color: black"
-                />
+                <img class="react-icon" src="./assets/img/React-icon.svg.png" />
               </div>
             </div>
             <div class="floatingLabel">
@@ -87,10 +83,7 @@
               <div class="skills">
                 <img src="./assets/img/htmlLogo.png" />
                 <img src="./assets/img/cssLogo.png" />
-                <img
-                  src="./assets/img/React-icon.svg.png"
-                  style="background-color: black"
-                />
+                <img class="react-icon" src="./assets/img/React-icon.svg.png" />
               </div>
             </div>
             <div class="floatingLabel"><h2>Project Unify</h2></div>
@@ -109,21 +102,62 @@
               <div class="skills">
                 <img src="./assets/img/htmlLogo.png" />
                 <img src="./assets/img/cssLogo.png" />
-                <img
-                  src="./assets/img/React-icon.svg.png"
-                  style="background-color: black"
-                />
+                <img src="./assets/img/React-icon.svg.png" class="react-icon" />
               </div>
             </div>
             <div class="floatingLabel">
               <a><h2>Fat-less</h2></a>
             </div>
           </div>
+
           <div class="description">
             <p>
               A web application used to calculate ones caloric requirements in
               order to lose fat.
             </p>
+          </div>
+        </div>
+      </div>
+
+      <!--About container-->
+      <div id="about" class="about-container">
+        <div class="box">
+          <h4 style="text-align: center; font-size: 25px">Skills</h4>
+          <!--personally beileve each skill should link to a filtered page of projects that have the incorperated skill-->
+          <ul style="padding-left: 16px">
+            <li>CSS</li>
+            <li>HTML</li>
+            <li>Java Script</li>
+            <li>Git</li>
+            <li>React</li>
+            <li>React Native</li>
+            <li>Redux</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h4 class="box-title">Mission Statement</h4>
+          <!--personally beileve each skill should link to a filtered page of projects that have the incorperated skill-->
+          <p>
+            My goal as a Full-Stack Developer is to lead and assist in the
+            creation of practical apllications that will help enrich the lives
+            of those who use applications im involved in creating weather that
+            be in ease of an task, connecting with others who undrstand them, or
+            who need assitance or guidance in learning/practicing a new skills.
+            <br /><br />
+            I aspire to be a cyber humanitarian.
+          </p>
+        </div>
+      </div>
+      <!-- Contact container -->
+      <div id="contact" class="contact-container">
+        <div class="contact-image">
+          <img src="./assets/img/cj-programming.jpg" />
+        </div>
+        <div class="contact-info">
+          <h1>Contact</h1>
+          <div>
+            <h2>Phone:301-653-8712</h2>
+            <h2>Email:Calvin.shreeves@gmail.com</h2>
           </div>
         </div>
       </div>
